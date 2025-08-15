@@ -1,0 +1,176 @@
+### assignment has been given and it was completed and screenshots are put in tasks.
+
+
+Dev environment : 
+	where software developers test minimal functionalities of the application in this environment.
+
+Testing environment : 
+	Where software testing team perform the functional test cases, non functional test cases and perform the performance testing
+	load testing all the test cases they will run in the environment.
+
+UAT environment : UAT - User Acceptance Test	
+	before releasing the product into the market we have to show prototype to the customers.
+
+Production environment :
+	where we can actually deploy the applications, so the customers can access the application.
+
+What is Container : 
+	container is a server or (vm) where actually we are going to run the application.
+
+Docker file : 
+	it is a text document it contains set of instructions about how to run applications in a container.
+
+Docker image :
+	it is a template  it contains what you need to run the application that means it contains your source code, dependencies, 
+	config files, lib files, on which platform you want your application "Build Once Run Anywhere".
+
+Docker Hub : 
+	it is a registry  or library , where we can store all the docker images.
+
+
+Developer -> Docker File -> Docker Image -> Docker Hub -> Staging environment (giving to testing team).
+
+
+
+command = : docker ps -a   -> going to show all the containers irrespective of the state
+
+every docker gets unique name, id, port 
+
+
+command = : docker ps  -> will show the running containers.
+
+
+it : interactive terminal
+
+
+# To check for the container status : 
+	dockers ps
+
+# TO create a container : 
+
+	command = : docker create -it --name webserver amazonlinux /bin/bash
+
+# To go inside the container : 
+	docker exec -it webserver /bin/bash
+
+# To exit the container : 
+	exit     -> stops all the process and exits
+	
+
+
+## To perform all this in once : 
+	docker run -it --name sample ubuntu /bin/bash
+
+
+# We want to come out of the container but keep the process running 
+	press : -> cntrl+P+Q     : all at once
+
+# How to run your application 24x7
+
+
+# What is deamon containers or detach more?
+
+	docker run -td --name web-app -p 
+
+every micro service works in different port number
+
+
+hostport number : userchoice  -> we can give any port number which ever the user likes it. from 0 - 
+
+port number defines how to access the application from the browser 
+port number 3002
+			
+ to create and run docker image : -> docker run -td --name web-app -p 3002:3000 muralisocial123/cart-page-test:1.0
+
+======================================================================================================================
+
+Docker file : 
+	it is a text document it contains set of instructions about how to run applications in a container.
+
+Docker file instruction : 
+
+	BUILD COMMANDS : 
+	
+	1. FROM INSTRUCTION : Define Base Image or Parent image of the application.
+			      Every docker file must start with the from instruction.
+
+	2. COPY INSTRUCTION : To copy a file or directory from local machine into docker image.
+	
+	3. ADD INSTRUCTION : Same as copy. Used for downloading packages from internet to the docker.
+		     
+	4. RUN INSTRUCTION : going to help to download the dependencies packages or install the packages in a container.
+
+	5. .DOCKERIGNORE : If you want to remove unnecessary packages or files while building a docker image we are going to user 				   dockerignore.
+	
+	
+	RUN COMMANDS : 
+
+	1. CMD COMMAND : Defines which code or which artifact that we have to run in a container.
+	
+	2. ENTRYPOINT : Defines Entry of the application.
+			CMD instruction will allow run time arguments.
+			ENTRYPOINT will not allow the runtime arguments.
+	
+	3. EXPOSE : It defines on which port number you want to access the application.
+
+	4. ENV : Defines environment variable of the application.
+
+	WORKDIR : It defines keep the files inside the container.
+
+	USER : If you want to create a user accounts, we are going to use userinstruction.
+
+
+	
+## Information to collect from the software team 
+
+
+	environment vairables, port numbers and database endpoints
+
+
+
+we have application code 
+
+we have to write docker file for application.
+There are 7 steps to follow : 
+
+1. Identify the base image of the application
+2. Create a work directory
+3. Copy the dependencies into the docker image
+4. Install the dependencies
+5. Copy whole source code from the local machine into docker image
+6. Define the exposed port number or on which port number you want to access the application
+7. Mention which code we have to run in a container
+
+
+
+
+after cloning 
+git clone -b master https://github.com/Swasthik-Prabhu/Dimple-CapsuleProject.git
+
+go to that directory
+
+
+build the docker image 
+	docker build -t web-app-nodejs:1.0 .      -> given tag 1.0 and . represents the current directory
+
+then check for docker image
+	docker images
+	
+to see the layers it created 
+	docker inspect web-app-nodejs:1.0 
+
+
+	docker run -td --name node-app -p  3015:3015 web-app-nodejs:1.0
+
+
+
+
+ docker tag web-app-nodejs:1.0 swasthikprabhu/web-app-nodejs
+ docker push swasthikprabhu/web-app-nodejs
+
+
+1. create a web project in chatgpt (website) and write a docker file for the application deploy in a lginx webserver
+2. identify the problems with the containers 
+
+
+

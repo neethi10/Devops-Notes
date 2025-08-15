@@ -1,0 +1,73 @@
+### no assingment was given on this day ###
+
+
+What is namespace?
+
+	dividing cluster into isolated environments, when we are deploying multiple projects we use namespace.
+	
+	it is created automatically Kubernetes to create 
+
+	To check the health of the node , Kubernetes master node use lease objects.
+Kube-public : anyone are able to access in this workspace
+
+
+the time of cluster creation by default all the resources like metric server CNI, core DNS all the resources will be created in the namespace.
+
+
+### note : when deploying application production servers, we never deploy any applicatons in default namespace.
+
+
+How to create custom namespace
+
+
+
+### if a pod goes down there are three problems we have to face 
+
+1. We are going to get application downtime - To overcome this problem we have to attach controllers to the pod.
+2. Every pod has own ip address, if pod goes down the ip address will change - To overcome this problem we have to create services in kubernetes(it will create static url).
+3. If pod goes down along with the pod we are going to lose the data - To overcome this problem we have to implement volumes in kuberentes.
+
+
+### Replica set
+
+Replica set is a kubernetes object it is going to maintain minimum number of nodes 24x7 (replica set is always match desired state = actual state).
+
+### NOTE : 
+	
+Replica Set Problems : 
+	In realtime applications we don't  recommend use replica set because we cant able to perform  rollout, rollback operations.
+	
+
+What is deployemtns ?
+	In Kubernetes we are deploying applications using deployment object or deployment control
+	 Deployment will manage replica set , replica set will manage the pods.
+
+
+### if you want to expose application through the web browser Kubernetes will introduce object called services
+
+In services there three type of services 
+1. cluster ip  service
+2. node port service
+3. Load	balancer service
+
+
+
+### Monitoring 
+
+To understand whats going inside the application  we are implementing monitoring dashboards with the help of monitoring dashboard we can recognise if something goes wrong with the application and also we can able to identify how much cpu how much memory consuming pods, nodes, cluster health we can identify 
+
+monitoring tools like prometheus 
+
+### prometheus is a metric server where it is going to collect time series of data (TSDB).It sends data to grafana dash boards.
+
+### Grafana : 
+	With the help of grafana we can set monitoring dashboards where we can see your data in the form of py charts or graphs or 
+	
+
+
+### NOTE : 
+	Handsible is a configuration management tools. we will perform automation using this
+
+
+
+

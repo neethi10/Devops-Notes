@@ -1,0 +1,20 @@
+git clone -b master https://github.com/Swasthik-Prabhu/Dimple-CapsuleProject.git
+cd Dimple-CapsuleProject
+docker build -t web-app-nodejs:1.0 .
+docker images
+docker inspect web-app-nodejs:1.0  -> to inspect or see the layers
+docker images
+docker run -td --name node-app -p 3015:3015 web-app-nodejs:1.0
+docker ps
+
+open docker hub
+
+docker exec -it node-app /bin/bash     here node-app is the name..check through docker ps
+exit
+docker login
+docker images
+docker tag web-app-nodejs:1.0 swasthikprabhu/web-app-nodejs
+docker images
+docker push swasthikprabhu/web-app-nodejs
+docker run -td --name web-app1 -p 3015:3015 swasthikprabhu/web-app-nodejs:latest     ->in terminal
+

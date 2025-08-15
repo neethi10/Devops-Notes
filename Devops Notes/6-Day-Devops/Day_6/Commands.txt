@@ -1,0 +1,50 @@
+### Continue from the day 5 of the Kubernetes
+
+kubectl get namespace
+kubectl get all -n kube-system
+kubectl create ns swasthik-ns  -> to create namespace
+kubectl get ns   -> to show ns
+kubectl get pods
+kubectl run test-pod --image nginx --port 80 -n swasthik-ns
+kubectl get pods -n swasthik-ns
+
+
+
+to check if it can create or not
+kubectl delete pod test-pod -n swasthik-ns
+create rs.yaml file in vs
+git clone https://github.com/Swasthik-Prabhu/swasthik-k8s-manifests.git
+
+kubectl apply -f  rs.yaml
+kubectl get pods -n swasthik-ns
+kubectl get rs -n swasthik-ns
+
+kubectl get pods -n swasthik-ns -> u will see pending then u need to solve this by descrinbing
+kubectl describe pod  -n swasthik-ns <pod-name>
+aws cluster
+
+
+kubectl get rs -n swasthik-ns
+kubectl delete rs cart-page-rs  -n swasthik-ns
+kubectl apply -f deployment.yaml -n  swasthik-ns
+kubectl get deployments -n swasthik-ns
+kubectl get pods -o wide -n swasthik-ns
+
+
+
+
+git pull
+kubectl apply -f service.yaml
+
+if we get error of not finding anything in out namespace use 
+
+kubectl apply -f name.yaml -n swasthik-ns    -> solves this
+
+kubectl get deployments -n swasthik-ns
+kubectl get svc -n swasthik-ns  -> you will get the url use it with the port number
+
+
+
+
+
+

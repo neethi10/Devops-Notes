@@ -1,0 +1,27 @@
+### no assingment was given on this day ###
+
+
+in day 2 
+
+
+he asked us to create AWS account 
+he thought us how to create the ec2 instance
+
+
+steps : 
+1. open aws then go into ec2
+2. go to instance 
+3. click on the launch instance
+4. Write the name of the instance
+5. choose the type of instance
+6. choose the operating system
+7. choose the key pair
+8. choose the security group
+9. click on the launch instance
+10. wait for the instance to be launched
+11. go to the instance and click on the connect to instance
+12. copy the public ip address and paste it in the putty
+13. enter the username and password and click on the open
+14. you are now connected to the instance
+
+

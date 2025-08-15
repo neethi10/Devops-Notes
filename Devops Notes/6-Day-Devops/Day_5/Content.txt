@@ -1,0 +1,121 @@
+### no assingment was given on this day ###
+
+
+### Problems with Container
+
+1.Containers will not support autoscaling
+	scale-up : whenever the traffic gets increase towards the application we have to increase the number of servers.
+	
+	vertical scaling : 
+			it means you have to increase the system resources.
+	horizontal auto scaling :
+			it means we have to add additional servers to existing infrastructure.
+	
+			
+			
+# what is scale down?
+	whenever the traffic goes slow towards the application we have to remove the additional servers
+
+
+2.Containers will not support load balancing.
+
+3.If we loss or if the container is down we are going to get the application down time.
+
+4.Container will not support self healing feature.
+
+
+To overcome the problems we are moving to the orchestration tools
+
+
+## What is Kubernetes?
+	It is a container management tool, it is going to manage all the containers.
+	Kubernetes perform the automatic deployment of the application.
+	
+
+## Kubernetes features
+
+1. Orchestration
+2. Auto scaling
+3. Load balancing
+4. Self healing
+5. Platform independent -> can run on any cloud
+6. To perform the automation Kubernetes we are going to write manifesto files (yaml files).
+
+
+
+
+## Kubernetes 
+
+# steps 
+
+1. create a jump server or western host
+2. Note : we have to install kubectl, ecsctl and also awscli
+
+
+
+
+
+eksctl delete cluster --region=us-east-1 --name=swasthik-cluster
+
+
+
+## cluster : 
+
+1. Kubernetes will manage the application in the cluster.
+
+2. What is Cluster?
+	Cluster is a group of nodes it contains master node and worker nodes
+	
+	# Master node
+		It is the hero of the cluster which is going to take care cluster head 
+
+
+3. Worker node is where you can deploy ur cluster 
+	in a cluster at least we should have one master node and one workder node
+
+	cluster are of 2 types
+	
+	1. ON premises cluster : we have to manage this cluster by ourself, if something goes wrong  in application in downtime we are responsible for that.
+
+	2. Cloud manage clusters : this clusters are managed by the cloud provider, if something goes wrong they are responsible for the application. In aws if you want to create a cluster we have a  service called eks -> elastic Kubernetes service
+
+
+
+
+# in a master node we have 4 componenets
+
+1. API server : it is a hero of the cluster whenever you want to perform autoscaling load balancing its going to play a crucial role
+
+2. ETCD Component : It is a distributed database, where you are going to store information of the cluster in the form of key value pairs
+
+3. CONTROLLER : it is responsible for monitoring health of the application. 
+
+			## note : it always check the desired state = actual status 
+4. SCHEDULER : it is a component, it is going to schedule a pod in a node
+
+		## pod : in kuberentes we will run the application in a pod. POD contains the containers (in a container we have a docker 			image). POD is a smallest deployable unit in kuberentes.
+
+## WORKER NODE COMPONENTS  
+
+1. Kubelet : it is responsible for creating pods, it is going to act as a agent, something goes wrong in the worker node its going to communicate to master.
+
+2. Container Runtime : it is nothing but like a docker. It is responsible for pulling the docker image, creating the containers, starting the container is responsible for managing the container life cycle.
+
+3. kube-proxy : is a networking component in the worker node. It is responsible for creating requirements, accessing the applications over the internet
+
+
+
+4 fileds are important in kuberntes
+
+1. API version : it defines schema representation of object
+2. META data : it defines name of the object 
+3. SPEC : it defines behaviour of the object 
+
+
+
+### 1 CPU = 1000 m
+### 1 GB = 1024 megabytes
+
+
+
+

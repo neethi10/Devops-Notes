@@ -1,0 +1,90 @@
+### no assingment was given on this day ###
+
+
+In the first day 
+
+He explained us what is devops, pipelines, why devops is needed and how it works
+
+
+
+similar content he provided and explained us 
+
+
+DevOps is a cultural and technical approach that combines software development (Dev) and IT operations (Ops) to enable faster, more reliable, and 
+more collaborative software delivery. Rather than working in isolated silos, development and operations teams come together to streamline 
+processes and ensure continuous feedback. At its core, DevOps emphasizes automation, collaboration, and integration to improve the speed and
+quality of software deployment.One of the key components of DevOps is the pipeline, which is essentially an automated workflow that takes code
+through various stages—like building, testing, and deploying—until it reaches production. This pipeline ensures that every code change goes 
+through a consistent and efficient process, reducing human error and manual intervention.But why is DevOps needed in the first place? In 
+traditional models, there were delays, miscommunications, and bottlenecks between developers writing code and operations deploying it. DevOps 
+solves this by introducing practices like Continuous Integration (CI) and Continuous Deployment (CD), which enable teams to deliver features 
+quickly, fix bugs faster, and respond to user needs in real time. It improves collaboration, boosts efficiency, and allows companies to innovate 
+without being slowed down by outdated processes.In practice, DevOps works by using a combination of tools and principles. Teams use version 
+control systems like Git to manage code, CI/CD tools like Jenkins or GitHub Actions to automate the pipeline, containerization tools like Docker
+for consistent environments, and monitoring tools to ensure reliability after deployment. Ultimately, DevOps isn’t just about tools—it's a 
+mindset shift that brings speed, stability, and shared responsibility to the entire software lifecycle.
+
+
+4 factors for successive business
+		1.faster delivery of services
+		2.quality- you should not compromise with quality
+		3.lesser spening
+		4.availabilty of the services
+		
+thats why we use cloud
+
+cloud is the remote services
+data center is the collection of servers
+
+two types of services:
+	1.public cloud 
+	2.private cloud
+	
+cloud provides 3 types of services
+	1.IaaS
+	2.PaaS
+	3.SaaS
+	
+aws is going to provide the following services:
+	1.provides autoservice
+	2.availability of services (99.11)%
+	3.on demand ..( gonna support any service when needed)
+	
+services which are important for us in aws menu
+	1.compute option (ec2 services) to deploy aplications in the cloud
+	2.containers.(eks- Elastic kubernetes service)
+	3.databases (dynamoDB,rds -relation database services)
+	
+	
+compute -ec2
+	1.os
+	2.server configuration
+	3.storage
+	
+	
+if we have to give any permission in amzon linux we should use visudo file
+
+there 2 family in linux servers
+	red hat family- amazon linux,oracle linux,sussi linux,redhat linux
+	
+	whenever we are using redhat family we have to install httpd ( hyper text transfer protocol, d means deamon server)
+	
+	debian family
+	ubuntu os , debian os 
+	whenever using debian family we have to use apachelinux server or enginex server
+	
+how to install any packages we should use " yum " command
+ 	y-yello
+ 	u-update
+ 	m-modify
+ 	
+ which httpd
+ 
+ service httpd status
+ if dead: service httpd start
+ 
+ 
+ 
+
+
+
